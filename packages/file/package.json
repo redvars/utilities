@@ -1,6 +1,6 @@
 {
   "name": "@utility/file",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Promise-based file system utility functions",
   "license": "MIT",
   "type": "module",
