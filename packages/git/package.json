@@ -1,0 +1,29 @@
+{
+  "name": "@utility/git",
+  "version": "0.4.1",
+  "description": "Git command helpers",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/mod.d.ts",
+      "default": "./dist/mod.js"
+    }
+  },
+  "types": "./dist/mod.d.ts",
+  "files": [
+    "dist",
+    "!dist/**/*.tsbuildinfo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redvars/utilities.git",
+    "directory": "packages/git"
+  },
+  "engines": {
+    "node": ">=26"
+  }
+}

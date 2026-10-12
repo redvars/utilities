@@ -1,0 +1,33 @@
+{
+  "name": "@utility/types",
+  "version": "0.4.0",
+  "description": "Collection of commonly used types",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/mod.d.ts",
+      "default": "./dist/mod.js"
+    },
+    "./json": {
+      "types": "./dist/src/JSON.d.ts",
+      "default": "./dist/src/JSON.js"
+    }
+  },
+  "types": "./dist/mod.d.ts",
+  "files": [
+    "dist",
+    "!dist/**/*.tsbuildinfo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redvars/utilities.git",
+    "directory": "packages/types"
+  },
+  "engines": {
+    "node": ">=26"
+  }
+}

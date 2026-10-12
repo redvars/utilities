@@ -1,0 +1,32 @@
+{
+  "name": "@utility/file",
+  "version": "0.1.4",
+  "description": "Promise-based file system utility functions",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/mod.d.ts",
+      "default": "./dist/mod.js"
+    }
+  },
+  "types": "./dist/mod.d.ts",
+  "files": [
+    "dist",
+    "!dist/**/*.tsbuildinfo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redvars/utilities.git",
+    "directory": "packages/file"
+  },
+  "engines": {
+    "node": ">=26"
+  },
+  "dependencies": {
+    "@utility/types": "^0.4.0"
+  }
+}

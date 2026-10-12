@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/types" },
+    { "path": "packages/date" },
+    { "path": "packages/file" },
+    { "path": "packages/git" },
+    { "path": "packages/number" },
+    { "path": "packages/string" }
+  ]
+}

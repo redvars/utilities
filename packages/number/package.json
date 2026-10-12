@@ -1,0 +1,29 @@
+{
+  "name": "@utility/number",
+  "version": "0.2.0",
+  "description": "Collection of number utility functions",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/mod.d.ts",
+      "default": "./dist/mod.js"
+    }
+  },
+  "types": "./dist/mod.d.ts",
+  "files": [
+    "dist",
+    "!dist/**/*.tsbuildinfo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redvars/utilities.git",
+    "directory": "packages/number"
+  },
+  "engines": {
+    "node": ">=26"
+  }
+}

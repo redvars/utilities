@@ -1,0 +1,9 @@
+{
+  "name": "@utility/file",
+  "version": "0.1.4",
+  "license": "MIT",
+  "exports": "./mod.ts",
+  "publish": {
+    "include": ["mod.ts", "src/**/*.ts", "README.md"]
+  }
+}
