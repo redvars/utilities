@@ -4,6 +4,13 @@ Node.js monorepo of small, dependency-free utility packages published under
 the `@utility` scope. Managed with npm workspaces and TypeScript project
 references.
 
+## Purpose
+
+This project keeps the runtime APIs wrapped. Consumers import the `@utility/*`
+packages instead of calling runtime APIs (Node.js file system, child
+processes, etc.) directly. When we want to flip the runtime, we only need to
+update this project rather than the whole platform.
+
 | Package | Description |
 | --- | --- |
 | [`@utility/date`](packages/date) | Date helpers (`isISODate`) |
