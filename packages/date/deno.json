@@ -1,6 +1,6 @@
 {
-  "name": "@utility/string",
-  "version": "0.6.0",
+  "name": "@utility/date",
+  "version": "0.3.2",
   "license": "MIT",
   "exports": "./mod.ts",
   "publish": {

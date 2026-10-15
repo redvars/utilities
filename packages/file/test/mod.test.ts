@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
 import * as fs from "node:fs/promises";
+import * as http from "node:http";
+import type { AddressInfo } from "node:net";
 import * as path from "node:path";
 import { after, before, describe, it } from "node:test";
 import { fileURLToPath } from "node:url";
@@ -110,6 +112,36 @@ describe("file", () => {
     );
     assert.equal(await exists(path.join(destination, "path", "a.json")), true);
     assert.equal(await exists(path.join(destination, "sample.txt")), true);
+  });
+
+  it("#unZipFromURL(): http URL", async () => {
+    const zip = await fs.readFile(path.join(TEST_RESOURCES_PATH, "compress.zip"));
+    const server = http.createServer((req, res) => {
+      if (req.url === "/compress.zip") {
+        res.writeHead(200, { "Content-Type": "application/zip" }).end(zip);
+      } else {
+        res.writeHead(404).end();
+      }
+    });
+    await new Promise<void>((resolve) =>
+      server.listen(0, "127.0.0.1", resolve)
+    );
+    const { port } = server.address() as AddressInfo;
+
+    try {
+      const destination = path.join(TEMP, "http");
+      await unZipFromURL(`http://127.0.0.1:${port}/compress.zip`, destination);
+      assert.equal(await exists(path.join(destination, "sample.txt")), true);
+
+      const missing = path.join(TEMP, "http-missing");
+      await assert.rejects(
+        () => unZipFromURL(`http://127.0.0.1:${port}/missing.zip`, missing),
+        /404/,
+      );
+      assert.deepEqual(await fs.readdir(missing), []);
+    } finally {
+      await new Promise((resolve) => server.close(resolve));
+    }
   });
 
   it("#unZipFromURL(): invalid archive rejects and cleans up", async () => {

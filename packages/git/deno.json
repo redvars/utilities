@@ -1,6 +1,6 @@
 {
-  "name": "@utility/number",
-  "version": "0.2.0",
+  "name": "@utility/git",
+  "version": "0.4.2",
   "license": "MIT",
   "exports": "./mod.ts",
   "publish": {

@@ -1,0 +1,11 @@
+{
+  "workspace": [
+    "./packages/date",
+    "./packages/file",
+    "./packages/git",
+    "./packages/number",
+    "./packages/string",
+    "./packages/types"
+  ],
+  "exclude": ["packages/*/dist/"]
+}

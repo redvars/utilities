@@ -1,8 +1,9 @@
 import { execFile } from "node:child_process";
+import process from "node:process";
 import { GitError } from "./GitError.ts";
 
 /**
- * Utility class for executing Git commands in Node.js.
+ * Utility class for executing Git commands in Node.js, Deno and Bun.
  *
  * Requires a `git` executable on the `PATH`. Commands run in the directory
  * given to the constructor (or `process.cwd()`), with no shell involved.

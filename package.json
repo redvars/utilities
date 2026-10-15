@@ -1,7 +1,7 @@
 {
   "name": "utilities",
   "private": true,
-  "description": "Monorepo of small Node.js utility packages (@utility/*)",
+  "description": "Monorepo of small runtime-agnostic (Node.js, Deno, Bun) utility packages (@utility/*)",
   "license": "MIT",
   "type": "module",
   "workspaces": [
@@ -14,7 +14,10 @@
     "build": "tsc -b",
     "clean": "tsc -b --clean",
     "typecheck": "tsc -b && tsc -p tsconfig.check.json",
-    "test": "npm run build && node --test \"packages/*/test/**/*.test.ts\""
+    "test": "npm run build && node --test \"packages/*/test/**/*.test.ts\"",
+    "test:deno": "deno test --allow-read --allow-write --allow-run --allow-env --allow-net packages/",
+    "test:bun": "bun test --timeout 30000 packages/",
+    "test:all": "npm test && npm run test:deno && npm run test:bun"
   },
   "devDependencies": {
     "@types/node": "^26.0.0",

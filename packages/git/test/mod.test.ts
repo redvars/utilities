@@ -19,6 +19,8 @@ describe("git", () => {
     await repo.runCommand("init");
     await repo.runCommand("config", "user.email", "test@example.com");
     await repo.runCommand("config", "user.name", "Test");
+    // Keep commits independent of the user's global signing setup.
+    await repo.runCommand("config", "commit.gpgsign", "false");
   });
 
   after(async () => {

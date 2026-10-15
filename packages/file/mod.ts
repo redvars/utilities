@@ -1,7 +1,7 @@
 /**
- * Promise-based file system helpers for Deno: existence checks, directory
- * creation/removal, text/JSON read & write, glob-based JSON loading, copying,
- * and zip extraction.
+ * Promise-based file system helpers for Node.js, Deno and Bun: existence
+ * checks, directory creation/removal, text/JSON read & write, glob-based JSON
+ * loading, copying, and zip extraction.
  *
  * @example Usage
  * ```ts ignore
