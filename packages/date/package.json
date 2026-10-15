@@ -1,6 +1,6 @@
 {
   "name": "@utility/date",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Collection of date utility functions",
   "license": "MIT",
   "type": "module",

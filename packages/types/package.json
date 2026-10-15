@@ -1,6 +1,6 @@
 {
   "name": "@utility/types",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Collection of commonly used types",
   "license": "MIT",
   "type": "module",
