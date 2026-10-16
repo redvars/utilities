@@ -17,6 +17,9 @@
     "test": "npm run build && node --test \"packages/*/test/**/*.test.ts\"",
     "test:deno": "deno test --allow-read --allow-write --allow-run --allow-env --allow-net packages/",
     "test:bun": "bun test --timeout 30000 packages/",
+    "coverage": "npm run build && node --test --experimental-test-coverage --test-coverage-include=\"packages/*/src/**\" --test-coverage-include=\"packages/*/mod.ts\" \"packages/*/test/**/*.test.ts\"",
+    "coverage:deno": "deno test --coverage=coverage --allow-read --allow-write --allow-run --allow-env --allow-net packages/ && deno coverage coverage",
+    "coverage:bun": "bun test --coverage --timeout 30000 packages/",
     "test:all": "npm test && npm run test:deno && npm run test:bun"
   },
   "devDependencies": {
